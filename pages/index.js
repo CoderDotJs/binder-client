@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Home from "../components/Home/Index";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Home />
         <button className="btn">Button</button>
         <button className="btn btn-primary">Button</button>
         <button className="btn btn-secondary">Button</button>
