@@ -20,8 +20,6 @@ a {
 }
 [class^="number-slide"],
 [class*=" number-slide"] {
-  background: grey;
   display: flex;
-  height: auto;
   max-height: 100vh;
 }
