@@ -30,9 +30,12 @@ const Index = () => {
         ></div>
         <nav className={styles.navbar_wrapper}>
           <div className="navbar py-0 px-5">
-            <div className="navbar-start">
+            <div className="navbar-start lg:w-8/12">
               <div className="dropdown">
-                <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                <label
+                  tabIndex="0"
+                  className="btn btn-ghost text-white lg:hidden"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -50,40 +53,33 @@ const Index = () => {
                 </label>
                 <ul
                   tabIndex="0"
-                  className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                  className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-xl font-semibold text-black flex justify-start items-start"
                 >
-                  <li>
-                    <a>Item 1</a>
+                  <li className="mx-4">
+                    <Link href="/">Products</Link>
                   </li>
-                  <li tabIndex="0">
-                    <a className="justify-between">
-                      Parent
-                      <svg
-                        className="fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                      </svg>
-                    </a>
-                    <ul className="p-2">
-                      <li>
-                        <a>Submenu 1</a>
-                      </li>
-                      <li>
-                        <a>Submenu 2</a>
-                      </li>
-                    </ul>
+                  <li className="mx-4">
+                    <Link href="/">Learn</Link>
                   </li>
-                  <li>
-                    <a>Item 3</a>
+                  <li className="mx-4">
+                    <Link href="/">Safety</Link>
+                  </li>
+                  <li className="mx-4">
+                    <Link href="/">Support</Link>
+                  </li>
+                  <li className="mx-4">
+                    <Link href="/">Download</Link>
                   </li>
                 </ul>
               </div>
-              <Image src={icon} width={180} height={100} alt="logo" />
-              <ul className="text-xl font-semibold text-white flex justify-around items-center">
+              <Image
+                src={icon}
+                width={180}
+                height={100}
+                alt="logo"
+                className="hidden lg:block"
+              />
+              <ul className="hidden lg:flex text-xl font-semibold text-white justify-around items-center">
                 <li className="mx-4">
                   <Link href="/">Products</Link>
                 </li>
@@ -101,8 +97,8 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-            <div className="navbar-end">
-              <button className="cursor-pointer text-red-600 bg-white px-6 py-2 text-xl font-semibold rounded-md">
+            <div className="navbar-end lg:w-4/12">
+              <button className="cursor-pointer text-red-600 bg-white px-3 py-1 lg:px-6 lg:py-2 text-sm lg:text-xl font-semibold rounded-md">
                 Log in
               </button>
             </div>
@@ -110,10 +106,10 @@ const Index = () => {
         </nav>
         <div className={`${styles.banner_text}`}>
           <div className=" flex justify-center items-center flex-col pt-10 w-full h-full">
-            <h1 className="text-8xl text-center mb-12 mt-10 tracking-wide text-white font-bold">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-center mb-12 mt-10 tracking-wide text-white font-bold">
               Start someting epic.
             </h1>
-            <button className="text-white font-medium rounded-full px-20   py-4 bg-gradient-to-r from-[#fd267a] to-[#ff6036]">
+            <button className="text-white font-medium rounded-full px-10 py-2 lg:px-20 lg:py-4 bg-gradient-to-r from-[#fd267a] to-[#ff6036]">
               Create Account
             </button>
           </div>
@@ -124,8 +120,8 @@ const Index = () => {
       </div>
 
       {/* reviews slider */}
-      <div ref={sliderRef} className="container mx-auto my-10 keen-slider">
-        <div className="keen-slider__slide number-slide">
+      <div ref={sliderRef} className="container mx-auto my-10 keen-slider ">
+        <div className="keen-slider__slide number-slide p-3">
           <div className="w-full h-80 p-5 bg-white border-2 rounded-md">
             <div className="flex justify-between">
               <div className="w-9/12">
@@ -147,7 +143,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="keen-slider__slide number-slide">
+        <div className="keen-slider__slide number-slide p-3">
           <div className="w-full h-80 p-5 bg-white border-2 rounded-md">
             <div className="flex justify-between">
               <div className="w-9/12">
@@ -169,7 +165,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="keen-slider__slide number-slide">
+        <div className="keen-slider__slide number-slide p-3">
           <div className="w-full h-80 p-5 bg-white border-2 rounded-md">
             <div className="flex justify-between">
               <div className="w-9/12">
@@ -191,7 +187,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="keen-slider__slide number-slide">
+        <div className="keen-slider__slide number-slide p-3">
           <div className="w-full h-80 p-5 bg-white border-2 rounded-md">
             <div className="flex justify-between">
               <div className="w-9/12">
@@ -213,7 +209,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="keen-slider__slide number-slide">
+        <div className="keen-slider__slide number-slide p-3">
           <div className="w-full h-80 p-5 bg-white border-2 rounded-md">
             <div className="flex justify-between">
               <div className="w-9/12">
@@ -235,7 +231,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="keen-slider__slide number-slide">
+        <div className="keen-slider__slide number-slide p-3">
           <div className="w-full h-80 p-5 bg-white border-2 rounded-md">
             <div className="flex justify-between">
               <div className="w-9/12">
@@ -260,9 +256,9 @@ const Index = () => {
       </div>
 
       <footer className="footer py-2">
-        <div className="container mx-auto w-full">
-          <div className="flex w-full border-b-2 pb-4">
-            <div className="w-3/12">
+        <div className="container mx-auto ">
+          <div className="grid p-5 lg:p-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full border-b-2 pb-4">
+            <div className="">
               <h3 className="text-lg uppercase text-black font-bold mb-2">
                 About
               </h3>
@@ -273,7 +269,7 @@ const Index = () => {
                 <li>Intellectual Property</li>
               </ul>
             </div>
-            <div className="w-3/12">
+            <div className="">
               <h3 className="text-lg uppercase text-black font-bold mb-2">
                 Careers
               </h3>
@@ -282,7 +278,7 @@ const Index = () => {
                 <li>Tech Blogs</li>
               </ul>
             </div>
-            <div className="w-3/12">
+            <div className="">
               <h3 className="text-lg uppercase text-black font-bold mb-2">
                 Socials
               </h3>
@@ -304,7 +300,7 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-3/12">
+            <div className="">
               <ul className="text-lg">
                 <li>FAQ</li>
                 <li className="mt-1">Destination</li>
@@ -314,8 +310,8 @@ const Index = () => {
               </ul>
             </div>
           </div>
-          <div className="flex items-center py-3">
-            <span className="text-lg font-bold uppercase block mr-4">
+          <div className="flex  items-center py-3 px-5 lg:px-0">
+            <span className="text-base md:text-lg font-bold uppercase block mr-4">
               Get the app!
             </span>
             <Image
@@ -333,7 +329,7 @@ const Index = () => {
               className="block mx-2"
             />
           </div>
-          <div className="border-b-2 pb-3">
+          <div className="border-b-2 pb-3 px-5 lg:px-0">
             <p>
               Single people, listen up: If you’re looking for love, want to
               start dating, or just keep it casual, you need to be on Tinder.
@@ -355,14 +351,14 @@ const Index = () => {
               connections, memories, and everything in between.
             </p>
           </div>
-          <div className="w-full flex justify-between items-center py-4">
-            <div>
-              <ul className="flex ">
-                <li className="mx-1">FAQ </li>
-                <li className="mx-1">/ Safety Tips </li>
-                <li className="mx-1">/ Terms </li>
-                <li className="mx-1">/ Cookie Policy </li>
-                <li className="mx-1">/ Privecy Settings </li>
+          <div className="w-full flex flex-col justify-between items-center py-4">
+            <div className="my-2 md:my-0">
+              <ul className="flex text-xs">
+                <li className="md:mx-1">FAQ </li>
+                <li className="md:mx-1">/ Safety Tips </li>
+                <li className="md:mx-1">/ Terms </li>
+                <li className="md:mx-1">/ Cookie Policy </li>
+                <li className="md:mx-1">/ Privecy Settings </li>
               </ul>
             </div>
             <div>
